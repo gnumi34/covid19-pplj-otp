@@ -13,6 +13,7 @@ class FormSerializer(serializers.ModelSerializer):
 
 class UserIDSerializer(serializers.ModelSerializer):
     forms = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    owner = serializers.HiddenField(default=serializers.CurrentUserDefault())
 
     def validate_nik(self, value):
         """

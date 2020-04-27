@@ -45,12 +45,12 @@ class UserIDViewSet(viewsets.ModelViewSet, NestedViewSetMixin):
     Menyediakan fungsi 'Create', 'Retrieve', 'Update', dan 'Destroy'
     untuk form identitas pengguna
     """
+    def get_queryset(self):
+        return UserID.objects.filter(owner=self.request.user)
+
     serializer_class = UserIDSerializer
     authentication_classes = [TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
-
-    def perform_create(self, serializer):
-        return serializer.save(owner=self.request.user)
 
 
 class UserViewSet(viewsets.ReadOnlyModelViewSet):
