@@ -1,7 +1,7 @@
-django~=3.0.5
-djangorestframework~=3.11.0
-twilio~=6.38.1
-psycopg2~=2.8.5
-requests~=2.23.0
+django
+djangorestframework
+twilio
+psycopg2
 drf-extensions
+drfpasswordless
 python-decouple
