@@ -16,7 +16,7 @@ class FormViewSet(viewsets.ModelViewSet, NestedViewSetMixin):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return Form.objects.filter(userid=self.kwargs['parent_lookup_userid'])
+        return Form.objects.filter(userid__owner=self.request.user)
 
     def perform_create(self, serializer):
         (param1, param2, param3, param4) = self.request.POST.get('gejala_demam', False), \
