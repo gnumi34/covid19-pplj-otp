@@ -25,7 +25,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['covid19-app.us-east-1.elasticbeanstalk.com', '34.199.187.84']
+ALLOWED_HOSTS = ['covid19-app.us-east-1.elasticbeanstalk.com']
 
 
 # Application definition
