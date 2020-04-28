@@ -211,6 +211,6 @@ cython_debug/
 
 .idea/
 
-*/migrations/
+*/covid19-pplj/migrations/
 *.env
 *.log
